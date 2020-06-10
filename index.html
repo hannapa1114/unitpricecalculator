@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<htmla>
+<head>
+    <meta charset="UTF-8">
+    <title>Cafe Unit Price Calc</title>
+    <link rel="stylesheet" href="assets/css/main.css" />
+</head>
+<body>
+
+		<!-- Header -->
+        <header id="header" class="alt">
+            <div class="inner">
+                <h1>디저트 단가 계산기</h1>
+                <p>사장님들의 걱정을 덜어드립니다</a></p>
+            </div>
+        </header>
+
+    <!-- Wrapper -->
+        <div id="wrapper">
+            <template>
+
+            </template>
+            <!-- Banner -->
+                <section id="intro" class="main">
+                    <div id="addRmvBtn">
+                        <div id="rmvBtn"><button>-</button></div>
+                        <div id="addBtn"><button>+</button></div>
+                    </div>
+
+                    <div class="mainList grid-display">
+                        <span>매입재료</span>
+                        <span>매입가</span>
+                        <span>1회 사용량</span>
+                        <span>단가:&nbsp;</span>
+                    </div>
+
+                    <div class="itemList grid-display">
+                        <div class="item__ingredient">
+                            
+                            <input type="text" class="i__idt-inp">
+                            <select name="" id="" class="i__idt-sel">
+                                <option value="gram">g</option>
+                            </select>
+                        </div>
+                        <div class="item__buyPrice">
+                            
+                            <input type="text" class="i__bp-inp">
+                            <span>원</span>
+                        </div>
+                        <div class="item__oneTimeUse">
+                            
+                            <input type="text" class="i__otu-inp">
+                            <select name="" id="" class="i__idt-sel">
+                                <option value="gram">g</option>
+                            </select>
+                        </div>
+                        <div class="itemUnitPrice">
+                            
+                            <span id="iup-out"></span>
+                            <span>원</span>
+                        </div>
+                    </div> <!--itemList-->
+
+                    <div id="oneTimeOutput">
+                        <span>1회 생산량</span>
+                        <input type="text" class="oto-inp">
+                    </div>
+
+                    <div id="btn"><button id="calc">계산</button></div>
+                   
+                </section>
+
+            <!-- CTA -->
+                <section id="cta" class="main special">
+                    <h2>대 박</h2>
+                    <p>내 시작은 미약하였으나, 끝은 창대하리라</p>
+                    <ul class="actions">
+                        <li><a href="#" class="button big">Get Started</a></li>
+                    </ul>
+                </section>
+
+            <!-- Main -->
+            <!--
+                <section id="main" class="main">
+                    <header>
+                        <h2>Lorem ipsum dolor</h2>
+                    </header>
+                    <p>Fusce malesuada efficitur venenatis. Pellentesque tempor leo sed massa hendrerit hendrerit. In sed feugiat est, eu congue elit. Ut porta magna vel felis sodales vulputate. Donec faucibus dapibus lacus non ornare. Etiam eget neque id metus gravida tristique ac quis erat. Aenean quis aliquet sem. Ut ut elementum sem. Suspendisse eleifend ut est non dapibus. Nulla porta, neque quis pretium sagittis, tortor lacus elementum metus, in imperdiet ante lorem vitae ipsum. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Etiam eget neque id metus gravida tristique ac quis erat. Aenean quis aliquet sem. Ut ut elementum sem. Suspendisse eleifend ut est non dapibus. Nulla porta, neque quis pretium sagittis, tortor lacus elementum metus, in imperdiet ante lorem vitae ipsum. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+                </section>
+            -->
+
+            <!-- Footer -->
+                <footer id="footer">
+                    <ul class="icons">
+                        <li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+                        <li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+                        <li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+                        <li><a href="#" class="icon fa-linkedin"><span class="label">LinkedIn</span></a></li>
+                        <li><a href="#" class="icon fa-envelope"><span class="label">Email</span></a></li>
+                    </ul>
+                    <p class="copyright">&copy; Zii. Design: <a href="https://templated.co">UPC</a>. Images: <a href="https://unsplash.com">Unsplash</a>.</p>
+                </footer>
+
+        </div>
+
+        <script src='./script.js'></script>
+</body>
+</html>
