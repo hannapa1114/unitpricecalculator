@@ -17,56 +17,53 @@
 
     <!-- Wrapper -->
         <div id="wrapper">
-            <template>
-
-            </template>
-            <!-- Banner -->
+            
                 <section id="intro" class="main">
-                    <div id="addRmvBtn">
-                        <div id="rmvBtn"><button>-</button></div>
-                        <div id="addBtn"><button>+</button></div>
-                    </div>
-
-                    <div class="mainList grid-display">
-                        <span>매입재료</span>
-                        <span>매입가</span>
-                        <span>1회 사용량</span>
-                        <span>단가:&nbsp;</span>
-                    </div>
-
-                    <div class="itemList grid-display">
-                        <div class="item__ingredient">
-                            
-                            <input type="text" class="i__idt-inp">
-                            <select name="" id="" class="i__idt-sel">
-                                <option value="gram">g</option>
-                            </select>
-                        </div>
-                        <div class="item__buyPrice">
-                            
-                            <input type="text" class="i__bp-inp">
-                            <span>원</span>
-                        </div>
-                        <div class="item__oneTimeUse">
-                            
-                            <input type="text" class="i__otu-inp">
-                            <select name="" id="" class="i__idt-sel">
-                                <option value="gram">g</option>
-                            </select>
-                        </div>
-                        <div class="itemUnitPrice">
-                            
-                            <span id="iup-out"></span>
-                            <span>원</span>
-                        </div>
-                    </div> <!--itemList-->
+                    <!-- <div id="addIdt">
+                        
+                        <input type="text" id="idtName">
+                        
+                    </div> -->
+                    <h2>Ingredient</h2>
 
                     <div id="oneTimeOutput">
                         <span>1회 생산량</span>
-                        <input type="text" class="oto-inp">
+                        <input type="number" id="produce">
                     </div>
 
-                    <div id="btn"><button id="calc">계산</button></div>
+                    <div id="idt-header" class="grid-display">
+                        <span>재료이름</span>
+                        <span>총량(g)</span>
+                        <span>매입가(원)</span>
+                        <span>1회 사용량(g)</span>
+                    </div>
+
+                    <div id="inputValue" class="grid-display">
+                        <input type="text" id="idt-name">
+                        <input type="number" id="idt-amount">
+                        <input type="number" id="idt-price">
+                        <input type="number" id="idt-useamount">
+                        <button id="addBtn">추가</button>
+                    </div>
+
+                    <h2>List</h2>
+
+                    <div id="list-header" class="grid-display">
+                        <span>재료이름</span>
+                        <span>총량(g)</span>
+                        <span>매입가(원)</span>
+                        <span>1회 사용량(g)</span>
+                        <span>단가</span>
+                    </div>
+
+                    <ul id="list">
+                        
+                    </ul><!--itemList-->
+
+                    <div id="total">
+                        <span>Total:&nbsp;&nbsp;</span>
+                        <span id="totalPrice"></span>
+                    </div>
                    
                 </section>
 
@@ -104,5 +101,6 @@
         </div>
 
         <script src='./script.js'></script>
+        <script src='./data.js'></script>
 </body>
 </html>
