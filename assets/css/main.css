@@ -149,7 +149,7 @@
 	}
 
 	p {
-		margin: 0 0 2em 0;
+		margin: 0 0 0 0;
 	}
 
 	h1, h2, h3, h4, h5, h6 {
@@ -466,12 +466,8 @@ ol {
 ul {
 	list-style: disc;
 	margin: 0 0 2em 0;
-	padding-left: 1em;
 }
 
-	ul li {
-		padding-left: 0.5em;
-	}
 
 	ul.alt {
 		list-style: none;
@@ -507,6 +503,7 @@ ul {
 		cursor: default;
 		list-style: none;
 		padding-left: 0;
+		padding-top: 30px;
 	}
 
 		ul.actions li {
@@ -827,12 +824,12 @@ ul {
 		}
 
 		#header.alt {
-			height: 20em;
-			min-height: 20em;
-			min-height: 75vh;
+			height: 15em;
+			min-height: 15em;
+			min-height: 62vh;
 		}
 
-			#header.alt:before {
+			#.alt:before {
 				-moz-transition: background-color 3s ease;
 				-webkit-transition: background-color 3s ease;
 				-ms-transition: background-color 3s ease;
@@ -944,12 +941,28 @@ ul {
 		text-align: center;
 	}
 
-	ul {
+	li {
 		list-style: none;
 	}
-
-	li {
+	#itemList li {
 		margin-top: 20px;
+	}
+
+	#oneOutput {
+		display: grid;
+		grid-template-columns: repeat(5, 1fr);
+		width: 100%;
+		padding-bottom: 20px;
+	}
+
+	.firstdiv {
+		grid-column: 5 / 6;
+	}
+	
+	  
+	
+	#produce-hint {
+		font-size: 0.1em;
 	}
 
 	.grid-display {
@@ -959,22 +972,22 @@ ul {
 		justify-items: center;
 	}
 
-
-	input[type="text"] {
-		text-align: center;
-		width: 45%;
-	}
-
-	#oneTimeOutput {
-		margin: 20px;
+	#list-header {
 		width: 100%;
-		text-align: right;
-		padding-right: 50px;
+		padding-bottom: 10px;
+	} 
+
+	#list-header span {
+		font-weight: bold;
 	}
 
-	#oneTimeOutput > input {
-		width: 10%;
-		
+	#itemlist {
+		width: 100%;
+	}
+
+	input[type="text"],
+	input[type="number"] {
+		text-align: center;
 	}
 
 	#total {

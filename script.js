@@ -6,9 +6,14 @@
 
 
   aBtn.onclick = () => {
-    addResult()
-    totalPrice()
-
+    if(checkEmpty()) {
+      return
+    } else {
+      addResult()
+      totalPrice()
+      resetValue()
+    }
+    
   }
   
 // MVP
@@ -40,7 +45,7 @@ function addResult() {
   let bp = Number(price.value)
   let ua = Number(useAmount.value)
   let pd = Number(produce.value)
-  let up = Math.floor(unitCalculator(amt, bp, ua, pd))
+  let up = Number(unitCalculator(amt, bp, ua, pd = 1).toFixed(1))
 
   updateData(name.value, up)
 
@@ -58,6 +63,22 @@ function addResult() {
 
   li.appendChild(itemDiv)
   list.appendChild(li)
+
+  function checkName(name) {
+    let newData = []
+    DATA.forEach(function(el) {
+      if(name !== el.name) {
+        newData.push(el)
+      }
+    })
+    DATA = newData
+  }
+
+  itemDiv.onclick = () => {
+    deleteOne(itemDiv)
+    checkName(nameSpan.textContent)
+    totalPrice()
+  }
 
 }
 
@@ -78,7 +99,7 @@ function makeInputText(tag, name = '', type = 'text') {
 function updateData(name, unitprice) {
   //재료이름과 단가계산 결과를 DATA에 update
   let unit = {}
-  unit[name] = name
+  unit['name'] = name
   unit.unitPrice = unitprice
   
   DATA.push(unit)
@@ -88,7 +109,43 @@ function updateData(name, unitprice) {
 function totalPrice() {
   let totalPrice = document.getElementById('totalPrice')
   let total = DATA.reduce((total, el) => total + el.unitPrice, 0)
-
-  totalPrice.textContent = total + ' 원'
+  totalPrice.textContent = Number(total.toFixed(1)) + ' 원'
 }
 
+//5.빈칸 유효성 검사
+function checkEmpty () {
+  let name = document.getElementById('idt-name')
+  let amount = document.getElementById('idt-amount')
+  let price = document.getElementById('idt-price')
+  let useAmount = document.getElementById('idt-useamount')
+
+
+  if(name.value === '' || amount.value === '' || price.value === ''
+      || useAmount.value === '') {
+        alert('빈 칸을 모두 채우세요!')
+        return true
+      } else {
+        return false
+      }
+}
+
+//6. input value reset
+function resetValue() {
+  let name = document.getElementById('idt-name')
+  let amount = document.getElementById('idt-amount')
+  let price = document.getElementById('idt-price')
+  let useAmount = document.getElementById('idt-useamount')
+  let produce = document.getElementById('produce')
+
+  name.value = ''
+  amount.value = ''
+  price.value = ''
+  useAmount.value = ''
+  produce.value = ''
+
+}
+
+//7. list 개별 삭제
+function deleteOne(line) {
+  line.remove()
+}
