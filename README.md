@@ -1,6 +1,3 @@
-# unitpricecalculator
-Unit Price Calculator
-
 ### vuejs + typescript
 refactoring 중
 
