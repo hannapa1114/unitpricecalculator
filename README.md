@@ -1,9 +1,9 @@
 ### vuejs + typescript
 refactoring 중
 
-### 라이브러리 설치
+### 의존성 설치
 ```
-yarn add
+yarn or yarn install
 ```
 ### 실행
 ```
